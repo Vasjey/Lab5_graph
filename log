@@ -185,3 +185,17 @@ graph.c:44:23: error: assignment to ‘char *’ from ‘int’ makes pointer fr
    44 |     nuevo_edge->target=strup(nuevo_edge->target,dest);
       |                       ^
 65bcd9f
+Thu May 14 08:41:41 PM UTC 2026: 
+ graph.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addEdge’:
+graph.c:44:24: error: too many arguments to function ‘strdup’
+   44 |     nuevo_edge->target=strdup(nuevo_edge->target,dest);
+      |                        ^~~~~~
+In file included from test.c:3:
+/nix/store/41pf3md9zgpda9kwh6rzn5kaddf7i0lp-glibc-2.40-66-dev/include/string.h:187:14: note: declared here
+  187 | extern char *strdup (const char *__s)
+      |              ^~~~~~
+db0e658
