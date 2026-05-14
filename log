@@ -129,3 +129,30 @@ Thu May 14 08:37:15 PM UTC 2026:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 59de28a
+Thu May 14 08:37:52 PM UTC 2026: 
+ graph.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+In function ‘addEdge’,
+    inlined from ‘addEdge’ at graph.c:38:6:
+graph.c:44:24: error: array subscript ‘Edge[0]’ is partly outside array bounds of ‘unsigned char[8]’ [-Werror=array-bounds=]
+   44 |     nuevo_edge->target=strcpy(nuevo_edge->target,dest);
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+graph.c:43:29: note: object of size 8 allocated by ‘malloc’
+   43 |     Edge* nuevo_edge=(Edge*)malloc(sizeof(Edge*));
+      |                             ^~~~~~~~~~~~~~~~~~~~~
+graph.c:44:23: error: array subscript ‘Edge[0]’ is partly outside array bounds of ‘unsigned char[8]’ [-Werror=array-bounds=]
+   44 |     nuevo_edge->target=strcpy(nuevo_edge->target,dest);
+      |     ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+graph.c:43:29: note: object of size 8 allocated by ‘malloc’
+   43 |     Edge* nuevo_edge=(Edge*)malloc(sizeof(Edge*));
+      |                             ^~~~~~~~~~~~~~~~~~~~~
+graph.c:45:23: error: array subscript ‘Edge[0]’ is partly outside array bounds of ‘unsigned char[8]’ [-Werror=array-bounds=]
+   45 |     nuevo_edge->weight=weight;
+      |     ~~~~~~~~~~~~~~~~~~^~~~~~~
+graph.c:43:29: note: object of size 8 allocated by ‘malloc’
+   43 |     Edge* nuevo_edge=(Edge*)malloc(sizeof(Edge*));
+      |                             ^~~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+9ccae73
