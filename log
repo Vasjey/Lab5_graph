@@ -33,3 +33,41 @@ Thu May 14 08:21:26 PM UTC 2026:
  tests:  2|4
 ========================================
 7c593ba
+Thu May 14 08:27:55 PM UTC 2026: 
+ graph.c | 6 ++++++
+ 1 file changed, 6 insertions(+)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addEdge’:
+graph.c:43:31: error: ‘edge’ undeclared (first use in this function); did you mean ‘Edge’?
+   43 |     Edge* nuevo=malloc(sizeof(edge*))
+      |                               ^~~~
+      |                               Edge
+graph.c:43:31: note: each undeclared identifier is reported only once for each function it appears in
+graph.c:43:36: error: expected expression before ‘)’ token
+   43 |     Edge* nuevo=malloc(sizeof(edge*))
+      |                                    ^
+test.c:279:5: error: ‘main’ is normally a non-static function [-Werror=main]
+  279 | int main(int argc, char *argv[]) {
+      |     ^~~~
+test.c:303:1: error: expected declaration or statement at end of input
+  303 | }
+      | ^
+test.c:15:6: error: unused variable ‘msg’ [-Werror=unused-variable]
+   15 | char msg[500];
+      |      ^~~
+graph.c:43:11: error: unused variable ‘nuevo’ [-Werror=unused-variable]
+   43 |     Edge* nuevo=malloc(sizeof(edge*))
+      |           ^~~~~
+graph.c:42:11: error: unused variable ‘lista_ab’ [-Werror=unused-variable]
+   42 |     List *lista_ab=pair->value;
+      |           ^~~~~~~~
+test.c: At top level:
+test.c:279:5: error: ‘main’ defined but not used [-Werror=unused-function]
+  279 | int main(int argc, char *argv[]) {
+      |     ^~~~
+graph.c:71:7: error: ‘getAdjacentLabels’ defined but not used [-Werror=unused-function]
+   71 | List* getAdjacentLabels(Graph* g, const char* label) {
+      |       ^~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+3cb7e78
