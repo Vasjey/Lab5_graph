@@ -6,3 +6,18 @@ Fri May  8 10:07:21 PM UTC 2026:
  tests:  0|6
 ========================================
 36e8bf5
+Thu May 14 08:16:10 PM UTC 2026: 
+ graph.c | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘getWeight’:
+graph.c:54:24: error: implicit declaration of function ‘createlist’ [-Wimplicit-function-declaration]
+   54 |     List *lista_target=createlist();
+      |                        ^~~~~~~~~~
+graph.c:54:24: error: initialization of ‘List *’ from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+graph.c:54:11: error: unused variable ‘lista_target’ [-Werror=unused-variable]
+   54 |     List *lista_target=createlist();
+      |           ^~~~~~~~~~~~
+cc1: all warnings being treated as errors
+c4cc305
