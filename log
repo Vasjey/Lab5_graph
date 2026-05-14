@@ -82,3 +82,18 @@ graph.c:42:11: error: unused variable ‘lista_ab’ [-Werror=unused-variable]
       |           ^~~~~~~~
 cc1: all warnings being treated as errors
 a8a056a
+Thu May 14 08:35:54 PM UTC 2026: 
+ graph.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addEdge’:
+graph.c:43:36: error: ‘edge’ undeclared (first use in this function); did you mean ‘Edge’?
+   43 |     Edge* nuevo_edge=malloc(sizeof(edge*));
+      |                                    ^~~~
+      |                                    Edge
+graph.c:43:36: note: each undeclared identifier is reported only once for each function it appears in
+graph.c:43:41: error: expected expression before ‘)’ token
+   43 |     Edge* nuevo_edge=malloc(sizeof(edge*));
+      |                                         ^
+c529a3b
