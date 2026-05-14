@@ -166,3 +166,8 @@ graph.c:43:5: error: conversion to non-scalar type requested
    43 |     Edge* nuevo_edge=(Edge)malloc(sizeof(Edge));
       |     ^~~~
 a3710a2
+Thu May 14 08:38:23 PM UTC 2026: 
+ graph.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+dc62e88
