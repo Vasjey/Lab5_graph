@@ -40,7 +40,7 @@ void addEdge(Graph* g, const char* src, const char* dest, int weight) {
     MapPair *pair=map_search(g->adjacencyMap,(void*)src);
     if(pair==NULL)return;
     List *lista_ab=pair->value;
-    Edge* nuevo_edge=(Edge*)malloc(sizeof(Edge*));
+    Edge* nuevo_edge=(Edge)malloc(sizeof(Edge));
     nuevo_edge->target=strcpy(nuevo_edge->target,dest);
     nuevo_edge->weight=weight;
     list_pushBack(lista_ab,nuevo_edge);
