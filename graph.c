@@ -37,12 +37,15 @@ void addNode(Graph* g, const char* label) {
 
 void addEdge(Graph* g, const char* src, const char* dest, int weight) {
     if (!g || !src || !dest) return;
+    
 
 }
 
 List* getEdges(Graph* g, const char* label) {
     if (!g || !label) return NULL;
-
+    MapPair *pair=map_search(g->adjacencyMap,(void*)label);
+    if(pair==NULL)return NULL;
+    return pair->value;
     return NULL;
 }
 
@@ -56,11 +59,6 @@ int getWeight(Graph* g, const char* label1, const char* label2) {
         if(is_equal_string(aux->target,(void*)label2))return aux->weight;
     }
     return -1;
-    
-    
-
-    // Si no existe el origen o terminamos de iterar sin encontrar el destino
-    return -1; 
 }
 
 // Retorna una nueva List* que contiene elementos de tipo char* (las etiquetas)
