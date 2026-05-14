@@ -71,3 +71,14 @@ graph.c:71:7: error: ‘getAdjacentLabels’ defined but not used [-Werror=unuse
       |       ^~~~~~~~~~~~~~~~~
 cc1: all warnings being treated as errors
 3cb7e78
+Thu May 14 08:28:15 PM UTC 2026: 
+ graph.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addEdge’:
+graph.c:42:11: error: unused variable ‘lista_ab’ [-Werror=unused-variable]
+   42 |     List *lista_ab=pair->value;
+      |           ^~~~~~~~
+cc1: all warnings being treated as errors
+a8a056a
