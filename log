@@ -21,3 +21,9 @@ graph.c:54:11: error: unused variable ‘lista_target’ [-Werror=unused-variabl
       |           ^~~~~~~~~~~~
 cc1: all warnings being treated as errors
 c4cc305
+Thu May 14 08:16:28 PM UTC 2026: 
+ graph.c | 1 -
+ 1 file changed, 1 deletion(-)
+ tests:  1|5
+========================================
+2f82b4d
