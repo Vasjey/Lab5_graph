@@ -217,3 +217,13 @@ Sat May 16 12:02:10 AM UTC 2026:
  tests:  4|2
 ========================================
 e55b47f
+Sat May 16 12:05:24 AM UTC 2026: 
+ graph.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘createGraph’:
+graph.c:31:25: error: invalid use of incomplete typedef ‘Map’
+   31 |     *grafo->adjacencyMap=map_create(is_equal_string);
+      |                         ^
+04baf45
