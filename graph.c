@@ -28,7 +28,7 @@ int is_equal_string(void *key1, void *key2) {
 
 Graph* createGraph() {
     Graph *grafo=malloc(sizeof(Graph));
-    grafo->adjacencyMap=map_create(*is_equal);
+    grafo->adjacencyMap=map_create(is_equal_string);
     return grafo;
 }
 
@@ -69,7 +69,7 @@ int getWeight(Graph* g, const char* label1, const char* label2) {
     Edge *aux=list_first(lista_ab);
     while(aux != NULL){
         if(is_equal_string(aux->target,(void*)label2))return aux->weight;
-        list_next(lista_ab);
+        aux=list_next(lista_ab);
     }
     return -1;
 }
