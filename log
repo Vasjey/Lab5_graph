@@ -227,3 +227,17 @@ graph.c:31:25: error: invalid use of incomplete typedef ‘Map’
    31 |     *grafo->adjacencyMap=map_create(is_equal_string);
       |                         ^
 04baf45
+Sat May 16 12:58:39 AM UTC 2026: 
+ graph.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘createGraph’:
+graph.c:31:25: error: too few arguments to function ‘map_create’
+   31 |     grafo->adjacencyMap=map_create();
+      |                         ^~~~~~~~~~
+In file included from graph.c:8:
+map.h:14:6: note: declared here
+   14 | Map *map_create(int (*is_equal)(void *key1, void *key2)); // unsorted map
+      |      ^~~~~~~~~~
+acaa456
